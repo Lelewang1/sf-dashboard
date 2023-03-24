@@ -1,15 +1,25 @@
 <template>
   <CRow>
-    <CCol :xs="3">
-      <CWidgetStatsA class="mb-4" color="primary">
+    <CCol :xs="6">
+      <CWidgetStatsA
+        class="mb-4 month"
+        style="min-height: 400px; min-width: 400px; color: white"
+      >
         <template #value
-          >26K
-          <span class="fs-6 fw-normal">
-            (-12.4% <CIcon icon="cil-arrow-bottom" />)
-          </span>
+          ><h1 style="font-size: 100px; font-weight: bold">
+            {{ stats[0]?.value }}
+          </h1>
+          <!-- <span class="fs-6 fw-normal">
+            (+12.4% <CIcon icon="cil-arrow-bottom" />)
+          </span> -->
         </template>
-        <template #title>Users</template>
-        <template #action>
+
+        <template #title
+          ><h1 style="font-size: 50px; font-weight: bold">
+            {{ stats[0]?.title }}
+          </h1></template
+        >
+        <!-- <template #action>
           <CDropdown placement="bottom-end">
             <CDropdownToggle
               color="transparent"
@@ -24,8 +34,8 @@
               <CDropdownItem href="#">Something else here</CDropdownItem>
             </CDropdownMenu>
           </CDropdown>
-        </template>
-        <template #chart>
+        </template> -->
+        <!-- <template #chart>
           <CChart
             type="line"
             class="mt-3 mx-3"
@@ -92,20 +102,111 @@
               },
             }"
           />
-        </template>
+        </template> -->
       </CWidgetStatsA>
     </CCol>
-    <CCol :xs="3">
-      <CWidgetStatsA class="mb-4" color="info">
+    <CCol :xs="6">
+      <CWidgetStatsA
+        class="mb-4 month"
+        style="min-height: 400px; min-width: 400px; color: white"
+      >
         <template #value
-          >$6.200
+          ><h1 style="font-size: 100px; font-weight: bold">
+            {{ stats[1]?.value }}
+          </h1>
           <span class="fs-6 fw-normal">
-            (40.9% <CIcon icon="cil-arrow-top" />)
+            <!-- (-12.4% <CIcon icon="cil-arrow-bottom" />) -->
           </span>
         </template>
-        <template #title>Income</template>
+        <template #title>
+          <h1 style="font-size: 50px; font-weight: bold">
+            {{ stats[1]?.title }}
+          </h1></template
+        >
+      </CWidgetStatsA>
+    </CCol>
+    <CCol :xs="6">
+      <CWidgetStatsA
+        class="mb-4 month"
+        style="min-height: 400px; min-width: 400px; color: white"
+      >
+        <template #value
+          ><h1 style="font-size: 100px; font-weight: bold">
+            {{ stats[2]?.value }}
+          </h1>
+          <span class="fs-6 fw-normal">
+            <!-- (-12.4% <CIcon icon="cil-arrow-bottom" />) -->
+          </span>
+        </template>
+        <template #title>
+          <h1 style="font-size: 50px; font-weight: bold">
+            {{ stats[2]?.title }}
+          </h1></template
+        >
+      </CWidgetStatsA>
+    </CCol>
+    <CCol :xs="6">
+      <CWidgetStatsA
+        class="mb-4 month"
+        style="min-height: 400px; min-width: 400px; color: white"
+      >
+        <template #value
+          ><h1 style="font-size: 100px; font-weight: bold">
+            {{ stats[3]?.value }}
+          </h1>
+          <span class="fs-6 fw-normal">
+            <!-- (-12.4% <CIcon icon="cil-arrow-bottom" />) -->
+          </span>
+        </template>
+        <template #title
+          ><h1 style="font-size: 50px; font-weight: bold">
+            {{ stats[3]?.title }}
+          </h1></template
+        >
+      </CWidgetStatsA>
+    </CCol>
+    <CCol :xs="6">
+      <CWidgetStatsA
+        class="mb-4 year"
+        style="min-height: 400px; min-width: 400px; color: white"
+      >
+        <template #value
+          ><h1 style="font-size: 100px; font-weight: bold">
+            {{ stats[4]?.value }}
+          </h1>
+          <span class="fs-6 fw-normal">
+            <!-- (-12.4% <CIcon icon="cil-arrow-bottom" />) -->
+          </span>
+        </template>
+        <template #title
+          ><h1 style="font-size: 50px; font-weight: bold">
+            {{ stats[4]?.title }}
+          </h1></template
+        >
+      </CWidgetStatsA>
+    </CCol>
+
+    <!-- income -->
+    <CCol :xs="6">
+      <CWidgetStatsA
+        class="mb-4 year"
+        style="min-height: 400px; min-width: 400px; color: white"
+      >
+        <template #value
+          ><h1 style="font-size: 100px; font-weight: bold">
+            {{ stats[5]?.value }}
+          </h1>
+          <span class="fs-6 fw-normal">
+            <!-- (40.9% <CIcon icon="cil-arrow-top" />) -->
+          </span>
+        </template>
+        <template #title
+          ><h1 style="font-size: 50px; font-weight: bold">
+            {{ stats[5]?.title }}
+          </h1></template
+        >
         <template #action>
-          <CDropdown placement="bottom-end">
+          <!-- <CDropdown placement="bottom-end">
             <CDropdownToggle
               color="transparent"
               class="p-0 text-white"
@@ -118,9 +219,9 @@
               <CDropdownItem href="#">Another action</CDropdownItem>
               <CDropdownItem href="#">Something else here</CDropdownItem>
             </CDropdownMenu>
-          </CDropdown>
+          </CDropdown> -->
         </template>
-        <template #chart>
+        <!-- <template #chart>
           <CChart
             type="line"
             class="mt-3 mx-3"
@@ -186,19 +287,28 @@
               },
             }"
           />
-        </template>
+        </template> -->
       </CWidgetStatsA>
     </CCol>
-    <CCol :xs="3">
-      <CWidgetStatsA class="mb-4" color="warning">
+    <CCol :xs="6">
+      <CWidgetStatsA
+        class="mb-4 year"
+        style="min-height: 400px; min-width: 400px; color: white"
+      >
         <template #value
-          >2.49%
+          ><h1 style="font-size: 100px; font-weight: bold">
+            {{ stats[6]?.value }}
+          </h1>
           <span class="fs-6 fw-normal">
-            (84.7% <CIcon icon="cil-arrow-top" />)
+            <!-- (84.7% <CIcon icon="cil-arrow-top" />) -->
           </span>
         </template>
-        <template #title>Conversion Rate</template>
-        <template #action>
+        <template #title
+          ><h1 style="font-size: 50px; font-weight: bold">
+            {{ stats[6]?.title }}
+          </h1></template
+        >
+        <!-- <template #action>
           <CDropdown placement="bottom-end">
             <CDropdownToggle
               color="transparent"
@@ -267,19 +377,33 @@
               },
             }"
           />
-        </template>
+        </template> -->
       </CWidgetStatsA>
     </CCol>
-    <CCol :xs="3">
-      <CWidgetStatsA class="mb-4" color="danger">
-        <template #value
-          >44K
+    <CCol :xs="6">
+      <CWidgetStatsA
+        class="mb-4"
+        style="
+          min-height: 400px;
+          min-width: 400px;
+          background-color: #ffa200;
+          color: white;
+        "
+      >
+        <template #value>
+          <h1 style="font-size: 100px; font-weight: bold">
+            {{ stats[7]?.value }}
+          </h1>
           <span class="fs-6 fw-normal">
-            (-23.6% <CIcon icon="cil-arrow-bottom" />)
+            <!-- (-23.6% <CIcon icon="cil-arrow-bottom" />) -->
           </span>
         </template>
-        <template #title>Sessions</template>
-        <template #action>
+        <template #title
+          ><h1 style="font-size: 50px; font-weight: bold">
+            {{ stats[7]?.title }}
+          </h1></template
+        >
+        <!-- <template #action>
           <CDropdown placement="bottom-end">
             <CDropdownToggle
               color="transparent"
@@ -362,18 +486,54 @@
               },
             }"
           />
-        </template>
+        </template> -->
       </CWidgetStatsA>
     </CCol>
   </CRow>
 </template>
 
 <script>
-import { CChart } from '@coreui/vue-chartjs'
+// import { CChart } from '@coreui/vue-chartjs'
 export default {
   name: 'WidgetsStatsA',
   components: {
-    CChart,
+    // CChart,
+  },
+  data() {
+    return {
+      stats: [],
+    }
+  },
+  methods: {
+    async refresh() {
+      const res = await fetch('api/data')
+      const data = await res.json()
+      return data
+    },
+  },
+  async created() {
+    this.stats = await this.refresh()
+    setInterval(async () => {
+      this.stats = await this.refresh()
+    }, 1800000)
   },
 }
 </script>
+
+<style scoped>
+/* .month {
+  background-color: #005FE5;
+}
+
+.year {
+  background-color: #00B9A3;
+} */
+
+.month {
+  background-color: #00b9a3;
+}
+
+.year {
+  background-color: #363636;
+}
+</style>

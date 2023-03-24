@@ -1,17 +1,22 @@
 <template>
   <CHeader position="sticky" class="mb-4">
     <CContainer fluid>
-      <CHeaderToggler class="ps-1" @click="$store.commit('toggleSidebar')">
+      <!-- <CHeaderToggler class="ps-1" @click="$store.commit('toggleSidebar')">
         <CIcon icon="cil-menu" size="lg" />
-      </CHeaderToggler>
-      <CHeaderBrand class="mx-auto d-lg-none" to="/">
+      </CHeaderToggler> -->
+      <!-- <CHeaderBrand class="mx-auto d-lg-none" to="/">
         <CIcon :icon="logo" height="48" alt="Logo" />
-      </CHeaderBrand>
+      </CHeaderBrand> -->
       <CHeaderNav class="d-none d-md-flex me-auto">
         <CNavItem>
-          <CNavLink href="/dashboard"> Dashboard </CNavLink>
+          <CNavLink
+            href="/dashboard"
+            style="font-weight: bold; font-size: larger; color: #005fe5"
+          >
+            SEEINGFLOW
+          </CNavLink>
         </CNavItem>
-        <CNavItem>
+        <!-- <CNavItem>
           <CNavLink href="#">Users</CNavLink>
         </CNavItem>
         <CNavItem>
@@ -33,26 +38,27 @@
           <CNavLink href="#">
             <CIcon class="mx-2" icon="cil-envelope-open" size="lg" />
           </CNavLink>
-        </CNavItem>
-        <AppHeaderDropdownAccnt />
+        </CNavItem> -->
+        <!-- <AppHeaderDropdownAccnt /> -->
       </CHeaderNav>
     </CContainer>
-    <CHeaderDivider />
-    <CContainer fluid>
+    <!-- <CHeaderDivider style="min-height: 20px" /> -->
+    <!-- <CContainer fluid>
       <AppBreadcrumb />
-    </CContainer>
+    </CContainer> -->
   </CHeader>
+  <div style="min-height: 60px"></div>
 </template>
 
 <script>
-import AppBreadcrumb from './AppBreadcrumb'
-import AppHeaderDropdownAccnt from './AppHeaderDropdownAccnt'
+// import AppBreadcrumb from './AppBreadcrumb'
+// import AppHeaderDropdownAccnt from './AppHeaderDropdownAccnt'
 import { logo } from '@/assets/brand/logo'
 export default {
   name: 'AppHeader',
   components: {
-    AppBreadcrumb,
-    AppHeaderDropdownAccnt,
+    // AppBreadcrumb,
+    // AppHeaderDropdownAccnt,
   },
   setup() {
     return {
