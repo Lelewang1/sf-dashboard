@@ -494,6 +494,8 @@
 
 <script>
 // import { CChart } from '@coreui/vue-chartjs'
+
+const baseURL = process.env.VUE_APP_SF_SALES_DASHBOARD
 export default {
   name: 'WidgetsStatsA',
   components: {
@@ -506,7 +508,7 @@ export default {
   },
   methods: {
     async refresh() {
-      const res = await fetch('api/data')
+      const res = await fetch(baseURL + '/data')
       const data = await res.json()
       return data
     },
